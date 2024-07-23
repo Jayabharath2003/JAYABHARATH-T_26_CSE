@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function PrimeOrNot(){
+            let num=parseInt(document.getElementById("n1").value);
+            let result = "Prime";
+
+            if (num <= 1) {
+                result = "Not Prime";
+            } 
+            else {
+                for (let i = 2; i <= num / 2; i++) {
+                    if (num % i == 0) {
+                        result = "Not Prime";
+                        break;
+                    }
+                }
+            }
+            document.getElementById("ResultDiv").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    Enter the Number :<input type="text" id="n1"/>
+    <br>
+    <br>
+    <div id="ResultDiv"></div>
+    <button onclick="PrimeOrNot()">Calculate</button>
+    
+</body>
+</html>

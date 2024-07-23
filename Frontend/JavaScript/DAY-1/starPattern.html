@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Pattern(){
+            let num= parseInt(document.getElementById('num').value);
+            let pattern = "";
+            for(let i=0;i<num;i++){
+                for (let j = 1; j <= i; j++) {
+                    pattern += "* ";
+        }
+        pattern += "\n";
+    }
+    document.getElementById('ResultDiv').innerText = pattern;
+}
+    </script>
+</head>
+<body>
+    Enter the Value:<input type="text" id="num"/>
+    <br>
+    <br>
+    <button onclick="Pattern()">Proceed</button>
+    <div id="ResultDiv"></div>
+</body>
+</html>
