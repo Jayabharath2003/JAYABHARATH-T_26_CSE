@@ -5,19 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function Functions(){
+        function Functions() {
             let str = document.getElementById("str").value;
-            result=str.toUpperCase();
-            document.getElementById("ResultDiv").innerHTML = result;
+            let result = `String length: ${str.length}<br>
+            String char at index 2: ${str.charAt(2)}<br>
+            String slice (1, 4): ${str.slice(1, 4)}<br>
+            Substring (1, 4): ${str.substring(1, 4)}<br>
+            Substr (1, 4): ${str.substr(1, 4)}<br>
+            Upper case: ${str.toUpperCase()}<br>
+            Lower case: ${str.toLowerCase()}<br>
+            String concat: ${str.concat(' hello')}<br>
+            String trim: ${str.trim()}<br>
+            String trim start: ${str.trimStart()}<br>
+            String trim end: ${str.trimEnd()}<br>
+            String repeat (2 times): ${str.repeat(2)}<br>
+            String replace ('a' with 'o'): ${str.replace('a', 'o')}<br>
+            String replace all ('a' with 'o'): ${str.replaceAll('a', 'o')}<br>
+            String split and join: ${str.split(' ').join(', ')}<br>`;
 
+            document.getElementById("ResultDiv").innerHTML = result;
         }
     </script>
 </head>
 <body>
     Enter the String:<input type="text" id="str"/>
-    <br>
-    <br>
-    <div id="ResultDiv"></div>
+    <br><br>
     <button onclick="Functions()">Proceed</button>
+    <br><br>
+    <div id="ResultDiv"></div>
 </body>
 </html>

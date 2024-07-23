@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function onmouse(){
+alert("Good Afternoon")
+}
+function onchang(){
+var bg=document.getElementById("oc");
+document.body.style.backgroundColor = "skyblue";
+}
+
+function onclic(){
+    alert("Dont Tease on ME");
+}
+function omo(){
+   document.getElementById("om").style.color="blue";
+
+}
+    </script>
+</head>
+<body>
+    <p onmouseover="onmouse()">ON MOUSE OVER</p>
+    <p onchange="onchang()" style="background-color: rgb(20, 163, 195);" id="oc"><input type="text"> ON change</p>
+<button onclick="onclic()">Click</button>
+<p onmouseout="omo()"id="om">on mouse out</p>
+</body>
+</html>
