@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+ import { Component } from '@angular/core';
+ import { CalculatorService } from './calculator.service';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+ @Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 //export class AppComponent{
@@ -32,28 +33,35 @@ import { Component } from '@angular/core';
 //  this.imagepath="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRmgKdYXF10TIGkBICCUr6NI0bKohwUcChKjcXwBpUxBLeG9idP6KOBlAvIw&s"
 //}
 //}
-export class AppComponent {
-  flag : boolean;
-  vehicles:string[];
-  selectedVehicle:string;
-  myStyle:{};
-  myClass:string;
-  
-  constructor() {
-  this.flag = true;
-  this.vehicles=["TwoWheeler","ThreeWheeler","FourWheeler"];
-  this.selectedVehicle="";
-  this.myStyle={'width':'40%','border':'2px solid green','border-radius':'25px'};
-  this.myClass="MyClass1";
-  }
-  changeFlag() {
-  this.flag = ! this.flag;
-  }
-  setSelectedItem(vec:string){
-    this.selectedVehicle=vec;
-  }
-  changeStyle(){
-    this.myStyle={'width':'40%','border':'2px solid red','border-radius':'25px'};
-  }
-}
+// export class AppComponent {
+//   flag:boolean;
+//   vehicles:string[];
+//   selectedVehicle:string;
+//   myStyle:{};
+//   myClass:string;
 
+//   constructor(){
+//     this.flag=true;
+//     this.vehicles=["TwoWheeler","ThreeWheeler","FourWheeler"];
+//     this.selectedVehicle="";
+//     this.myStyle={'width':'40%','border':'2px solid green','border-radius':'25px'};
+//     this.myClass="MyClass1";
+//   }
+//   changeFlag(){
+//     this.flag=!this.flag;
+//   }
+//   setSelectedItem(vec : string){
+//     this.selectedVehicle=vec;
+//   }
+//     changeStyle(){
+//       this.myStyle={'width':'40%','border':'2px solid green','border-radius':'25px'};
+//     }
+//   }
+export class AppComponent {
+  sum:number;
+  sub:number;
+  constructor(private calc:CalculatorService){
+    this.sum=calc.getAddition(10,20);
+    this.sub=calc.getSubtraction(10,20);
+  }
+  }

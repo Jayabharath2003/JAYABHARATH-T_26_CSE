@@ -7,14 +7,14 @@
     <script>
         function Pattern(){
             let num= parseInt(document.getElementById('num').value);
-            let pattern = "";
-            for(let i=0;i<num;i++){
-                for (let j = 1; j <= i; j++) {
-                    pattern += "* ";
-        }
-        pattern += "\n";
-    }
-    document.getElementById('ResultDiv').innerText = pattern;
+            let pattern =" ";
+            for (let i=1;i<=num;i++) {
+                for (let j=1;j<=num-i+1;j++) {
+                    pattern+=j;
+                }
+                pattern+="\n ";
+            }
+    document.getElementById('ResultDiv').innerText=pattern;
 }
     </script>
 </head>

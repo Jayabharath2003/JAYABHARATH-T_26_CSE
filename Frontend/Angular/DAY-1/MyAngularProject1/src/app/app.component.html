@@ -19,7 +19,7 @@ Name : {{ name }}
   <h1>Two way data Binding</h1><br>
   Enter Your First Name <input type="text" [(ngModel)]="fname"><br>
   Welcome {{fname}}-->
-  <h1 [ngClass]="myClass">Structural and Attribute Directives Example</h1>
+ <!-- <h1 [ngClass]="myClass">Structural and Attribute Directives Example</h1>
   <br>
 <button (click)="changeFlag()">Show or Hide Div</button>
 <br><br>
@@ -39,4 +39,24 @@ Name : {{ name }}
       </div>
       <br>
       <button (click)="changeStyle()">ChangeStyle</button>
-  </div>
+  </div>-->
+  <!-- <table width="80%" align="center">
+    <tr>
+    <th><a routerLink="home">Home</a></th>
+    <th><a routerLink="contact">Contact</a></th>
+    <th><a routerLink="about">About</a></th>
+    </tr>
+    </table>
+    
+    <div>
+    This is the space for New Component.
+    <router-outlet></router-outlet>
+    </div> -->
+
+    <h1>
+      Addition:{{sum}}<br>
+      Subtraction:{{sub}}
+    </h1>
+    <br>
+    <app-child></app-child>
+
